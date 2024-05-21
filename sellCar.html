@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ขายรถ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/champ.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <main>
+      <div id="container" class="flex justify-center">
+        <div class="flex flex-col w-4/5 px-2 bg-gray-100">
+          <span class="text-center text-5xl m-8">ขายรถ</span>
+          <div id="sellcar-container" class="flex flex-col md:flex md:flex-row">
+            <div class="flex flex-col items-center md:w-4/5 mx-5 mt-0 mb-5">
+              <img
+                src="./assets/default.jpg"
+                id="imagePreview"
+                alt="seller-car"
+                class="border border-solid border-black"
+              /><input type="file" class="mt-5" id="imageInput"
+              accept="image/*""/>
+              <div class="preview">
+                <img
+                  id="imagePreview"
+                  src=""
+                  alt="Image Preview"
+                  style="display: none"
+                />
+              </div>
+            </div>
+            <div id="form" class="md:w-2/5">
+              <form action="#" class="flex flex-col gap-5">
+                <div class="flex justify-between bg-gray-200">
+                  <label for="brand">ยี่ห้อ</label
+                  ><select
+                    name="brand"
+                    id=""
+                    class="w-5/6 border border-solid border-black"
+                  >
+                    <option value="">Mercedes-Benz</option>
+                    <option value="">BMW</option>
+                    <option value="">Volkswagen</option>
+                    <option value="">Audi</option>
+                    <option value="">Volvo</option>
+                    <option value="">Peugeot</option>
+                    <option value="">Porsche</option>
+                    <option value="">MINI</option>
+                    <option value="">Land Rover</option>
+                    <option value="">Jaguar</option>
+                    <option value="">Tesla</option>
+                    <option value="" selected>Select brand</option>
+                  </select>
+                </div>
+                <div class="flex justify-between bg-gray-200">
+                  <label for="model">โมเดลรถ</label
+                  ><select
+                    name="model"
+                    id=""
+                    class="w-5/6 border border-solid border-black"
+                  >
+                    <option value="">Select car model</option>
+                    <!-- Audi -->
+                    <option value="A4">A4</option>
+                    <option value="A6">A6</option>
+                    <option value="A7 Sportback TFSI">A7 Sportback TFSI</option>
+                    <option value="Q3">Q3</option>
+                    <option value="Q5">Q5</option>
+
+                    <!-- BMW -->
+                    <option value="X1">X1</option>
+                    <option value="X2">X2</option>
+                    <option value="X3">X3</option>
+                    <option value="X4">X4</option>
+                    <option value="X5">X5</option>
+
+                    <!-- Mercedes-Benz -->
+                    <option value="EQS 450">EQS 450</option>
+                    <option value="GLE 450 4MATIC">GLE 450 4MATIC</option>
+                    <option value="GLC 300 4MATIC">GLC 300 4MATIC</option>
+                    <option value="GLC 43 AMG 4MATIC Coupe">
+                      GLC 43 AMG 4MATIC Coupe
+                    </option>
+                    <option value="S 580 4MATIC">S 580 4MATIC</option>
+
+                    <!-- MINI -->
+                    <option value="Cooper SE">Cooper SE</option>
+                    <option value="Countryman">Countryman</option>
+                    <option value="Convertible">Convertible</option>
+                    <option value="Hardtop 2-Door/3-Door">
+                      Hardtop 2-Door/3-Door
+                    </option>
+                    <option value="5-Door Hardtop">5-Door Hardtop</option>
+
+                    <!-- Peugeot -->
+                    <option value="2008">2008</option>
+                    <option value="3008">3008</option>
+                    <option value="308">308</option>
+                    <option value="5008">5008</option>
+                    <option value="508">508</option>
+
+                    <!-- Porsche -->
+                    <option value="911">911</option>
+                    <option value="Cayenne">Cayenne</option>
+                    <option value="Macan">Macan</option>
+                    <option value="Panamera">Panamera</option>
+                    <option value="Taycan">Taycan</option>
+
+                    <!-- Tesla -->
+                    <option value="Model 3">Model 3</option>
+                    <option value="Model S">Model S</option>
+                    <option value="Model X">Model X</option>
+                    <option value="Model Y">Model Y</option>
+                    <option value="Roadster">Roadster</option>
+
+                    <!-- Volkswagen -->
+                    <option value="Golf GTI">Golf GTI</option>
+                    <option value="Golf R">Golf R</option>
+                    <option value="Tiguan">Tiguan</option>
+
+                    <!-- Volvo -->
+                    <option value="S90">S90</option>
+                    <option value="V60">V60</option>
+                    <option value="XC40">XC40</option>
+                    <option value="XC60">XC60</option>
+                    <option value="XC90">XC90</option>
+
+                    <!-- Jaguar -->
+                    <option value="F-PACE">F-PACE</option>
+                    <option value="E-PACE">E-PACE</option>
+                    <option value="F-TYPE">F-TYPE</option>
+                    <option value="I-PACE">I-PACE</option>
+                    <option value="XF">XF</option>
+
+                    <!-- Land Rover -->
+                    <option value="Defender">Defender</option>
+                    <option value="Discovery">Discovery</option>
+                    <option value="Range Rover">Range Rover</option>
+                    <option value="Range Rover Evoque">
+                      Range Rover Evoque
+                    </option>
+                    <option value="Range Rover Sport">Range Rover Sport</option>
+                  </select>
+                </div>
+                <div class="flex justify-between bg-gray-200">
+                  <label for="year">ปีที่ผลิต</label>
+                  <input
+                    type="number"
+                    class="w-5/6 border border-solid border-black"
+                  />
+                </div>
+                <div class="flex justify-between bg-gray-200">
+                  <label for="color">สีรถ</label>
+                  <select
+                    name="color"
+                    class="w-5/6 border border-solid border-black"
+                    id=""
+                  >
+                    <option value="">Select Car Color</option>
+                    <option value="black">Black</option>
+                    <option value="white">White</option>
+                    <option value="silver">Silver</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="gray">Gray</option>
+                    <option value="darkgray">Dark Gray</option>
+                    <option value="charcoal">Charcoal</option>
+                    <option value="navy">Navy</option>
+                    <option value="darkblue">Dark Blue</option>
+                    <option value="green">Green</option>
+                    <option value="darkgreen">Dark Green</option>
+                    <option value="brown">Brown</option>
+                    <option value="beige">Beige</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="gold">Gold</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="copper">Copper</option>
+                    <option value="champagne">Champagne</option>
+                    <option value="burgundy">Burgundy</option>
+                    <option value="purple">Purple</option>
+                    <option value="teal">Teal</option>
+                    <option value="turquoise">Turquoise</option>
+                    <option value="maroon">Maroon</option>
+                    <option value="cream">Cream</option>
+                    <option value="ivory">Ivory</option>
+                    <option value="tan">Tan</option>
+                    <option value="offwhite">Off-White</option>
+                    <option value="lightblue">Light Blue</option>
+                    <option value="lightgreen">Light Green</option>
+                    <option value="lightgray">Light Gray</option>
+                    <option value="darkred">Dark Red</option>
+                    <option value="darkbrown">Dark Brown</option>
+                    <option value="darkpurple">Dark Purple</option>
+                    <option value="darkgreen">Dark Green</option>
+                  </select>
+                </div>
+                <div class="flex justify-between bg-gray-200">
+                  <label for="price">ราคาขาย</label>
+                  <input
+                    type="number"
+                    class="w-5/6 border border-solid border-black"
+                  />
+                </div>
+                <div class="flex flex-col">
+                  <label for="" class="bg-gray-200 mb-5"
+                    ><p>
+                      ข้อมูลรายละเอียดอื่นๆ เช่น อุปกรณ์เสริม, ประวัติการใช้งาน
+                    </p></label
+                  >
+                  <textarea
+                    name=""
+                    cols="50"
+                    rows="10"
+                    class="border border-solid border-black"
+                  ></textarea>
+                </div>
+                <div>
+                  <input type="checkbox" />
+                  <label for="checkbox"
+                    ><a href="#" class="text-blue-800 ml-2"
+                      >ผู้ใช้ยอมรับข้อตกลงสำหรับการใช้บริการฝากขาย</a
+                    >
+                  </label>
+                </div>
+                <div class="flex justify-center m-5">
+                  <input
+                    type="submit"
+                    value="บันทึก"
+                    class="w-20 p-3 bg-gray-200 rounded-xl"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="flex flex-col mt-8"></div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
